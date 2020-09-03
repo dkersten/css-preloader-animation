@@ -65,12 +65,52 @@ table {
 
 .cloud1 {
     top: 25%;
+    transform: translate(100%, -25%);
+    animation: clouds 3s ease infinite;
 }
 
 .cloud2 {
     top: 50%;
+    transform: translate(100%, -50%);
+    /* animation: clouds 3s ease infinite 1.2s;  */
 }
 
 .cloud3 {
     top: 75%;
+    transform: translate(100%, -75%);
+    /* animation: clouds 3s ease infinite 2.4s; */
+}
+
+.airplane {
+    width: 200px;
+    animation: airplane ease 1.5s infinite;
+}
+
+.preload h3 {
+    position: absolute;
+    top: 75%;
+    transform: translateY(-75%);
+    color: #fff;
+    font-size: 2.25rem;
+}
+
+@keyframes airplane {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(50px)
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes clouds {
+    0% {
+        right: 0%;
+    }
+    100% {
+        right: -130%;
+    }
 }
