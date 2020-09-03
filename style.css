@@ -60,25 +60,29 @@ table {
 .cloud1, .cloud2, .cloud3 {
     height: 100px;
     position: absolute;
-    right: 0;
 }
 
 .cloud1 {
     top: 25%;
     transform: translate(100%, -25%);
-    animation: clouds 3s ease infinite;
+    right: 0;
+    animation: clouds ease 3s infinite;
 }
 
 .cloud2 {
     top: 50%;
     transform: translate(100%, -50%);
-    /* animation: clouds 3s ease infinite 1.2s;  */
+    right: 0;
+    animation: clouds 3s ease infinite .35s;
+    z-index: -1;
 }
 
 .cloud3 {
     top: 75%;
     transform: translate(100%, -75%);
-    /* animation: clouds 3s ease infinite 2.4s; */
+    right: 0;
+    animation: clouds 2.8s ease infinite .9s;
+    z-index: -1;
 }
 
 .airplane {
@@ -107,10 +111,10 @@ table {
 }
 
 @keyframes clouds {
-    0% {
+    from {
         right: 0%;
     }
-    100% {
-        right: -130%;
+    to {
+        right: 130%;
     }
 }
