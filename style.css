@@ -55,6 +55,12 @@ table {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: opacity .5s ease;
+}
+
+.preload-finish {
+    opacity: 0;
+    pointer-events: none;
 }
 
 .cloud1, .cloud2, .cloud3 {
@@ -73,7 +79,7 @@ table {
     top: 50%;
     transform: translate(100%, -50%);
     right: 0;
-    animation: clouds 3s ease infinite .35s;
+    animation: clouds 3s ease infinite 2.35s;
     z-index: -1;
 }
 
@@ -81,7 +87,7 @@ table {
     top: 75%;
     transform: translate(100%, -75%);
     right: 0;
-    animation: clouds 2.8s ease infinite .9s;
+    animation: clouds 2.8s ease infinite 1s;
     z-index: -1;
 }
 
